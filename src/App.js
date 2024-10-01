@@ -20,6 +20,7 @@ import Task from "./pages/Task";
 import Members from "./pages/Members";
 import Team from "./pages/Team";
 import { Dashboard } from "./pages/Dashboard";
+import { Parsing } from "./pages/Parsing";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.auth);
@@ -44,6 +45,7 @@ function App() {
   const ADMIN_ROUTES = (
     <>
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/parsing" element={<Parsing />} />
       <Route path="/customer" element={<Customer />} />
       <Route path="/task" element={<Task />} />
       <Route path="/members" element={<Members />} />
@@ -84,7 +86,6 @@ function App() {
                 path="/reset-password/:token"
                 element={<ResetPassword />}
               />
-         
               <Route element={<AuthenticatedRoutes />}>
                 <Route path="/notifications" element={<NotificationPage />} />
 

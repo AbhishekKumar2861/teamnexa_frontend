@@ -23,10 +23,10 @@ function getItem(label, key, icon, children) {
   };
 }
 
-const keysInitials = ["dashboard", "customer", "task", "members", "team"];
+const keysInitials = ["parsing"];
 
 const AdminNavigation = () => {
-  const [selectedKey, setSelectedKey] = useState("assessments");
+  const [selectedKey, setSelectedKey] = useState("parsing");
   const { pathname } = useLocation();
   const dispatch = useDispatch();
 
@@ -45,11 +45,7 @@ const AdminNavigation = () => {
   }, [pathname, dispatch]);
 
   const items = [
-    getItem("Dashboard", "dashboard", <MailOutlined />, null),
-    getItem("Customer", "customer", <AppstoreOutlined />, null),
-    getItem("Members", "members", <SettingOutlined />, null),
-    getItem("Team", "team", <SettingOutlined />, null),
-    getItem("Task", "task", <SettingOutlined />, null),
+    getItem("Parsing Data", "parsing", <AppstoreOutlined />, null),
   ];
 
   return (
