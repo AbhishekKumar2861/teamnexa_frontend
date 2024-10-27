@@ -1,4 +1,4 @@
-const ADMIN_ROUTES_ARR = ["/parsing","/customer", "/task", "/members", "/team"];
+const ADMIN_ROUTES_ARR = ["dashboard","/customer", "/task", "/members", "/team"];
 
 
 export const USER_BASED_ROUTES = {
